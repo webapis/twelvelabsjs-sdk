@@ -1,0 +1,30 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "entryPointStrategy": "expand",
+  "exclude": [
+    "**/internal/**",
+    "**/utils/**",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeInternal": true,
+  "categorizeByGroup": true,
+  "categoryOrder": [
+    "Client",
+    "Resources",
+    "Request Types",
+    "Response Types",
+    "Errors",
+    "*"
+  ],
+  "readme": "README.md",
+  "name": "Twelve Labs JavaScript SDK",
+  "out": "docs-build",
+  "includeVersion": true,
+  "customFooterHtml": "SDK Version: __VERSION__ | API Version: v1.3",
+  "navigation": {
+    "includeVersion": true
+  }
+}
