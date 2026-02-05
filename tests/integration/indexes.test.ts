@@ -38,24 +38,30 @@ describe('Indexes Integration Tests', () => {
   const indexName = `test-index-${Date.now()}`;
   let indexId: string;
 
-  it('should create a new index and then delete it', async () => {
-    // Create
-    const index = await client.indexes.create({
+  it('should create, retrieve, and delete an index', async () => {
+    // 1. Create the index
+    const createResult = await client.indexes.create({
       name: indexName,
       engines: [
         {
-          name: 'marengo2.6',
-          options: ['visual', 'conversation'],
+          name: 'marengo3.0',
+          options: ['visual', 'audio'],
         },
       ],
     });
-    indexId = index.id;
 
+    // The create method might return a minimal object, so we only check for the ID here.
+    expect(createResult.id).toBeDefined();
+    indexId = createResult.id;
+
+    // 2. Get the full index to verify its properties
+    const index = await client.indexes.get(indexId);
     expect(index.name).toBe(indexName);
-    expect(index.id).toBeDefined();
+    expect(index.id).toBe(indexId);
+    expect(index.engines).toHaveLength(1);
+    expect(index.engines[0].name).toBe('marengo3.0');
 
-    // Cleanup: Delete the index
-    // A try-catch is used to ensure cleanup happens even if assertions fail
+    // 3. Cleanup: Delete the index
     try {
       await client.indexes.delete(indexId);
     } catch (e) {

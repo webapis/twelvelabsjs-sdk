@@ -1,0 +1,20 @@
+{
+  "name": "twelvelabs-sdk-indexes-example",
+  "version": "1.0.0",
+  "description": "Example of managing indexes with the Twelve Labs SDK.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@twelvelabs/sdk": "latest"
+  },
+  "keywords": [
+    "twelvelabs",
+    "sdk",
+    "example",
+    "indexes"
+  ],
+  "author": "Twelve Labs",
+  "license": "MIT"
+}

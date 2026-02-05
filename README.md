@@ -38,12 +38,16 @@ const index = await client.indexes.create({
   name: 'My Videos',
   engines: [
     {
-      name: 'marengo2.6',
-      options: ['visual', 'conversation']
+      name: 'marengo3.0',
+      options: ['visual', 'audio']
     }
   ]
 });
 
+// The following are examples of what you can do next.
+// These methods are not yet fully implemented in this version.
+
+/*
 // Upload a video
 const video = await client.videos.upload({
   indexId: index.id,
@@ -61,6 +65,7 @@ const results = await client.search.query({
 });
 
 console.log(`Found ${results.data.length} results`);
+*/
 ```
 
 ## Documentation
@@ -127,7 +132,7 @@ try {
 const index = await client.indexes.create({
   name: 'Product Videos',
   engines: [
-    { name: 'marengo2.6', options: ['visual', 'conversation', 'text_in_video'] }
+    { name: 'marengo3.0', options: ['visual', 'audio'] }
   ],
   addons: ['thumbnail']
 });
@@ -171,7 +176,7 @@ const video = await client.videos.upload({
 const results = await client.search.query({
   indexId: 'index_id',
   query: 'person wearing red shirt',
-  options: ['visual', 'conversation']
+  options: ['visual']
 });
 
 results.data.forEach(result => {

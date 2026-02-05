@@ -11,11 +11,11 @@ Tracking progress for Twelve Labs SDK (API v1.3).
 ## 1. Indexes (`/indexes`)
 | Endpoint | SDK Method | Implemented | Unit Tests | Integration Tests | Documentation | CodeSandbox |
 |----------|------------|:-----------:|:----------:|:-----------------:|:-------------:|:-----------:|
-| `POST /indexes` | `client.indexes.create` | ✅ | ✅ | 🚧 (Auth Error) | ✅ | ❌ |
-| `GET /indexes` | `client.indexes.list` | ✅ | ✅ | ❌ | ✅ | ❌ |
-| `GET /indexes/{id}` | `client.indexes.get` | ✅ | ✅ | ❌ | ✅ | ❌ |
-| `PUT /indexes/{id}` | `client.indexes.update` | ✅ | ✅ | ❌ | ✅ | ❌ |
-| `DELETE /indexes/{id}` | `client.indexes.delete` | ✅ | ✅ | 🚧 (Auth Error) | ✅ | ❌ |
+| `POST /indexes` | `client.indexes.create` | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `GET /indexes` | `client.indexes.list` | ✅ | ✅ | ❌ | ✅ | ✅ |
+| `GET /indexes/{id}` | `client.indexes.get` | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `PUT /indexes/{id}` | `client.indexes.update` | ✅ | ✅ | ❌ | ✅ | ✅ |
+| `DELETE /indexes/{id}` | `client.indexes.delete` | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ## 2. Videos (`/indexes/{index_id}/videos`)
 | Endpoint | SDK Method | Implemented | Unit Tests | Integration Tests | Documentation | CodeSandbox |
