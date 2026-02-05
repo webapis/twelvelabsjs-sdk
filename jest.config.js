@@ -18,15 +18,5 @@ module.exports = {
       statements: 90,
     },
   },
-  reporters: [
-    'default',
-    [
-      'jest-html-reporters',
-      {
-        publicPath: './test-results',
-        filename: 'report.html',
-        expand: true,
-      },
-    ],
-  ],
+  reporters: ['default'],
 };

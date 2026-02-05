@@ -1,3 +1,5 @@
+import { PaginatedResponse } from './common';
+
 export interface Index {
   id: string;
   name: string;
@@ -7,3 +9,5 @@ export interface Index {
   }[];
   created_at: string;
 }
+
+export interface PaginatedIndexes extends PaginatedResponse<Index> {}

@@ -6,8 +6,13 @@ export type { TwelveLabsConfig } from './client/client';
 export { Indexes } from './resources/indexes';
 
 // Types
-export type { CreateIndexParams } from './types/requests';
-export type { Index } from './types/responses';
+export type {
+  CreateIndexParams,
+  ListIndexesParams,
+  UpdateIndexParams,
+} from './types/requests';
+export type { Index, PaginatedIndexes } from './types/responses';
+export type { PaginatedResponse, PageInfo } from './types/common';
 
 // Errors
 export {
