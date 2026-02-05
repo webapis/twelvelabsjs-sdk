@@ -1,5 +1,7 @@
 {
-  "entryPoints": ["src/index.ts"],
+  "entryPoints": [
+    "src/index.ts"
+  ],
   "entryPointStrategy": "expand",
   "exclude": [
     "**/internal/**",
@@ -20,11 +22,7 @@
     "*"
   ],
   "readme": "README.md",
-  "name": "Twelve Labs JavaScript SDK",
+  "name": "Twelve Labs JavaScript SDK v0.1.0",
   "out": "docs-build",
-  "includeVersion": true,
-  "customFooterHtml": "SDK Version: __VERSION__ | API Version: v1.3",
-  "navigation": {
-    "includeVersion": true
-  }
+  "includeVersion": true
 }

@@ -6,10 +6,8 @@ const packageJson = require('../package.json');
 try {
   const typedocConfigPath = path.join(__dirname, '../typedoc.json');
   if (fs.existsSync(typedocConfigPath)) {
-    const typedocConfig = require(typedocConfigPath);
+    const typedocConfig = JSON.parse(fs.readFileSync(typedocConfigPath, 'utf-8'));
     typedocConfig.name = `Twelve Labs JavaScript SDK v${packageJson.version}`;
-    typedocConfig.customFooterHtml = 
-      `SDK Version: ${packageJson.version} | API Version: v1.3`;
     fs.writeFileSync(typedocConfigPath, JSON.stringify(typedocConfig, null, 2));
   }
 } catch (e) {
