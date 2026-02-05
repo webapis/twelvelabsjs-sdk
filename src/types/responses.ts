@@ -8,6 +8,7 @@ export interface Index {
     options: string[];
   }[];
   created_at: string;
+  updated_at: string;
 }
 
 export interface PaginatedIndexes extends PaginatedResponse<Index> {}
